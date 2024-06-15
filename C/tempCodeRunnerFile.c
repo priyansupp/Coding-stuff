@@ -1,0 +1,2 @@
+
+    scanf("%c", &temp);  // to clear the input buffer. After hitting enter, the input buffer would contain null char(\n)which gets scanned in below line 31 and it won't scan any further. So to prevent that we scan the null in temp variable and clear the input buff

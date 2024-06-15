@@ -1,0 +1,55 @@
+1. When a file1.cpp is created, it is stored in memory.
+2. When we compile file1.cpp, the compiler checks if the source code complies with cpp language rules and compiles the code and produces a file1.obj (or file1.o) object file.
+3. If a particular .cpp does not compile then it results in compiler error.
+4. Suppose we have multiple .cpp files in our program, hence multiple .o files and all of them are cross-dependent on eachother.
+5. A linker links all the .o files together along with the c++ library files and produces one .exe(executable) file that is the program that we can run.
+6. If a cross-dependency is not resolved(if linker cannot find the definition of a function or variable in any of translation units(any other cpp/object file)) then it results in linker error.
+7. If everything is fine, we can run the program and test & debug it.
+
+GENERAL:
+1. Reference variables are actual variables internally implemented as pointers.
+int &y = x;     // y has reference of x
+// There is no way to print the memory address of a reference variable in C++. References are not stored in memory like variables are. They are simply aliases for other variables.
+// References don't have their own addresses. Although references may be implemented as pointers.
+int *p1 = &x, *p2 = &y; // print address of both the variables, it'll be same because y is just a different name for x.
+cout << p1 << ' ' << p2 << '\n';
+
+
+OOPs:
+1. Local class(declared inside some local scope) has local scope and cannot have static member variables, but can have static methods
+https://stackoverflow.com/questions/8162994/why-arent-static-data-members-allowed-in-local-classes
+Basically, local classes have no linkage, and static data members require a linkage.
+{   // empty scope
+    class A{    // has local scope
+        static int x = 0;   // error
+        static int f() {}   // fine
+    };
+}
+int A::x = 5;           // requires such global initialization of static variables, but A itself does not have global scope
+
+2. Local class can access only static variables that are outside the class or global variabls(static or non-static).
+int x = 0;
+{
+    static int y = 0;
+    int z = 0;
+    class A{
+        A() { 
+            cout << x + y;  // fine
+            cout << z;      // error
+        }
+    };
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

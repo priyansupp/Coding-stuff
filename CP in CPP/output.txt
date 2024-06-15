@@ -1,0 +1,13 @@
+ Aftab Ansari
+	22CS60R54	8.76
+ Navneet Raj
+	22CS60R45	9.00
+ Ritik Raj
+	22CS60R66	8.90
+ Rohit Kumar
+	22CS60R33	7.75
+ Subham
+	22CS60R01	7.10
+ Unknown	22CS60R36	9.20
+ Vandana Kalshan
+	22CS60R83	7.30

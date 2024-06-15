@@ -1,0 +1,11 @@
+Data-preprocessing: 
+We started by importing the data set from pricing data file. Of the columns from seat types 1 and 2, there were multiple subtypes of seats with an arbitrary number of pricing for each of them. In order to account for missing values of seat subtypes, we assigned each subcolumn a value equal to the mean of each seat type, i.e seat type 1 mean was assigned to each subtype(i.e upper/lower/right/left...) and similarly for seat type 2. The approach for calculating the mean is equal to the number of commas a particular seat type in a row. A 3 comma row will contain data for 4 subtypes of seats from a particular type(in general, comma+1 number of subtypes of seats are given prices of). All the subtypes are then allotted the mean value thus obtained.
+'Service date' and 'Received at' are split into two columns based on date and time respectively.
+
+Algorithm: 
+k-modes algorithm
+The algorithm works on classifying data on basis of dissimilarities/similarities in data clusters. The bus operator which came out to have minimum time and the earliest date was assigned to be one independently setting prices of each seat type. The latter a bus operator comes into assigning prices is more likely to follow the ones who came before it.
+
+Result:
+The first column contains bus id.
+The second column contains ids of bus operators it follows.
