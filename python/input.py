@@ -24,6 +24,7 @@ for i in s:
     print(i, type(i))
 print(s[2])
 
+
 l = list(input("type something: "))         # forms a list of each character typed
 print(l, type(l))
 for i in l:
